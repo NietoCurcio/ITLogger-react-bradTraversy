@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import TechSelectOptions from '../techs/TechSelectOptions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import PropTypes from 'prop-types';
 import { updateLog } from '../../actions/logActions';
@@ -67,9 +68,7 @@ const EditLogModal = ({ updateLog, current }) => {
               <option value='' disabled>
                 Select Technian
               </option>
-              <option value='Obiwan Kenobi'>Obiwan Kenobi</option>
-              <option value='Sam Smith'>Sam Smith</option>
-              <option value='Legolas Elf'>Legolas Elf</option>
+              <TechSelectOptions />
             </select>
           </div>
         </div>
