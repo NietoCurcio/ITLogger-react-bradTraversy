@@ -1,4 +1,14 @@
-import { GET_LOGS, SET_LOADING, LOGS_ERROR, ADD_LOG } from '../actions/types';
+import {
+  GET_LOGS,
+  SET_LOADING,
+  LOGS_ERROR,
+  ADD_LOG,
+  DELETE_LOG,
+  SET_CURRENT,
+  SEARCH_LOGS,
+  CLEAR_CURRENT,
+  UPDATE_LOG,
+} from '../actions/types';
 
 const initalState = {
   logs: null,
@@ -20,6 +30,37 @@ export default (state = initalState, action) => {
         ...state,
         logs: [...state.logs, action.payload],
         loading: false,
+      };
+    case DELETE_LOG:
+      return {
+        ...state,
+        logs: state.logs.filter((log) => log.id !== action.payload),
+        loading: false,
+      };
+    case UPDATE_LOG:
+      return {
+        ...state,
+        logs: state.logs.map((log) =>
+          log.id === action.payload.id ? action.payload : log
+        ),
+      };
+    case SEARCH_LOGS:
+      return {
+        ...state,
+        logs: action.payload,
+        // in contactKeeper we filter logs which we already have
+        // in this one we take data from other endpoint with query params (json server)
+        // and fill the logs array in state with this data
+      };
+    case SET_CURRENT:
+      return {
+        ...state,
+        current: action.payload,
+      };
+    case CLEAR_CURRENT:
+      return {
+        ...state,
+        current: null,
       };
     case SET_LOADING:
       return {

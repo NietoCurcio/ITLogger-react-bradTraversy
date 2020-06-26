@@ -8,11 +8,11 @@
       "id": 1
     },
     {
-      "message": "hard drive failed in wokrstation 002",
-      "attention": true,
-      "tech": "Obiwan Kenobi",
-      "date": "2020-06-26T02:26:23.168Z",
-      "id": 2
+      "id": 2,
+      "message": "fixed hard drive on workstation 002",
+      "attention": false,
+      "tech": "Legolas Elf",
+      "date": "2020-06-26T02:55:08.201Z"
     },
     {
       "message": "1122 wireless down",
