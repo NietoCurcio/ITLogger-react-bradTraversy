@@ -38,11 +38,13 @@ The server side is made with [json-server](https://github.com/typicode/json-serv
 
 Client side is a react app and to handle state we use Redux state management
 
-![]()
+<img src="https://github.com/NietoCurcio/ITLogger-react-bradTraversy/blob/master/readme/image2.png?raw=true" width="550" alt="Redux">
 
 On the front end we have [materiazecss](https://materializecss.com/) library to deal with [modals](https://materializecss.com/modals.html) and [toasts](https://materializecss.com/toasts.html)
 
-![]()
+<p align="center">
+  <img src="https://github.com/NietoCurcio/ITLogger-react-bradTraversy/blob/master/readme/image3.png?raw=true" width="750" alt="ITLogger">
+</p>
 
 ### Getting started
 
@@ -53,4 +55,6 @@ And then
 ```sh
 npm run dev
 ```
-To run server and client [oncurrently](https://github.com/kimmobrunfeldt/concurrently)
+To run server and client [concurrently](https://github.com/kimmobrunfeldt/concurrently)
+
+Project built in React Front To Back
